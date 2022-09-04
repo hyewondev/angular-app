@@ -1,0 +1,21 @@
+<div class="container mt-4">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Date</th>
+                <th scope="col">Comments</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let transaction of transactions">
+                <th scope="row">{{ transaction.id }}</th>
+                <td>{{ transaction.date | date: 'dd/MM/yyyy' }}</td>
+                <td>{{ transaction.comments }}</td>
+                <td><a routerLink="/transaction/{{ transaction.id }}">View</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

@@ -1,0 +1,22 @@
+@import "~/node_modules/bootstrap/scss/functions";
+@import "~/node_modules/bootstrap/scss/variables";
+
+$bgColor: var(--bgColor);
+
+input:hover, 
+input:active, 
+input:focus
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
+
+.btn-outline {
+    border-color: $bgColor;
+    color: $bgColor;
+    &:hover, &:focus, &:active {
+        background-color: $bgColor;
+        color: $white;
+    }
+}
